@@ -1,0 +1,15 @@
+.env
+.env.*
+*.db
+*.db-wal
+*.db-shm
+backup_old_version/
+referral_bot/tests/
+__pycache__/
+*.py[cod]
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+render.yaml
+README.md

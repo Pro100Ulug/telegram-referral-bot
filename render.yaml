@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: referral-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m referral_bot.main
+    disk:
+      name: referral-bot-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DB_PATH
+        value: /var/data/referral_bot.db
